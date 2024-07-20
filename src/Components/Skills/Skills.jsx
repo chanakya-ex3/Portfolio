@@ -1,7 +1,5 @@
 import React from "react";
-import { FaReact, FaNodeJs, FaDatabase, FaPython } from "react-icons/fa";
-import { DiMongodb, DiJavascript1, DiHtml5, DiCss3 } from "react-icons/di";
-import { SiExpress, SiFlutter } from "react-icons/si";
+import { motion, useInView } from "framer-motion";
 import ReactIcon from "../../assets/skillsIcons/react.png";
 import NodeIcon from "../../assets/skillsIcons/node.png";
 import ExpressIcon from "../../assets/skillsIcons/express.png";
@@ -16,6 +14,27 @@ import CAIcon from "../../assets/skillsIcons/solutionsArchitect.jpeg";
 import CDIcon from "../../assets/skillsIcons/cloudDev.png";
 
 const Skills = () => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref);
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
   const techStack = [
     { name: "React", icon: ReactIcon },
     { name: "Flutter", icon: FlutterIcon },
@@ -38,12 +57,21 @@ const Skills = () => {
         Skills
       </h2>
       <div className="flex flex-col w-full h-full items-center justify-center">
-        <div className="tech-stack grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 sm:gap-14 ">
+        <motion.ul
+          ref={ref}
+          className="tech-stack grid grid-cols-2 sm:grid-cols-3 gap-5 md:grid-cols-4 md:gap-14 "
+          variants={container}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
           {techStack.map((tech) => (
-            <div
-              key={tech.name}
-              className="m-5 flex flex-row gap-2 items-center justify-start"
-            >
+            <motion.li
+            key={tech.name}
+            variants={item}
+            whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.8 }}
+            className="item sm:m-5 flex flex-col gap-2 items-center justify-center"
+          >
               <img
                 src={tech.icon}
                 width={"50px"}
@@ -53,9 +81,9 @@ const Skills = () => {
               <div className="tech-name text-lg font-bold text-primary-light dark:text-primary-dark">
                 {tech.name}
               </div>
-            </div>
+            </motion.li>
           ))}
-        </div>
+        </motion.ul>
       </div>
     </div>
   );

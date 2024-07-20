@@ -5,27 +5,27 @@ import { SocialIcon } from "react-social-icons";
 
 const Home = () => {
   return (
-    <div className="p-10 pivot-point h-full grid grid-cols-1 sm:grid-cols-4 gap-4">
+    <div className="p-10 pivot-point h-screen grid grid-cols-1 md:grid-cols-4 gap-4">
       <div className="rounded-3xl col-span-2 flex flex-col items-center justify-center md:justify-center gap-2">
         <img
-          className="rounded-2xl max-h-[350px] sm:max-h-full"
+          className="rounded-2xl max-h-[350px] md:max-h-full"
           src={profile}
-          width="800px"
+          // width="800px"
           alt="profile"
         />
         <div>
-          <p className="w-full text-primary-light dark:text-primary-dark font-semibold text-3xl sm:text-4xl lg:text-5xl">
+          <p className="w-full text-primary-light dark:text-primary-dark font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl">
             Chanakya B M
           </p>
         </div>
       </div>
-      <div className="col-span-2 flex flex-col justify-center items-center sm:items-start gap-4">
+      <div className="col-span-2 flex flex-col justify-center items-center md:items-start gap-4">
         <div>
-          <p className="w-full text-primary-light dark:text-primary-dark font-bold text-3xl text-center sm:text-left sm:text-5xl lg:text-8xl">
+          <p className="w-full text-primary-light dark:text-primary-dark font-bold text-3xl sm:text-4xl  sm:text-left md:text-5xl lg:text-6xl xl:text-8xl">
             Hello! I am
           </p>
         </div>
-        <div className="w-full text-purple font-bold text-3xl text-center sm:text-left sm:text-5xl lg:text-8xl">
+        <div className="w-full text-purple font-bold text-center md:text-left text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl">
           <Typewriter
             options={{
               strings: [
