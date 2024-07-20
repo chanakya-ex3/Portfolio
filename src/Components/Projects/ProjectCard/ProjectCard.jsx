@@ -11,6 +11,13 @@ const ProjectCard = ({
   description,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
 
   return (
     <div className={`bg-white rounded-lg w-[90vw] sm:w-[400px] h-[550px] ${isExpanded?"sm:h-fit":"sm:h-[600px]"}  flex flex-col`}>

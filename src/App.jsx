@@ -68,11 +68,11 @@ const App = () => {
         <div ref={experienceRef}>
           <ExperiencePage />
         </div>
-        <div ref={projectsRef}>
-          <ProjectsPage />
-        </div>
         <div ref={certificationsRef}>
           <CertificationsPage />
+        </div>
+        <div ref={projectsRef}>
+          <ProjectsPage />
         </div>
         <div ref={contactRef}>
           <ContactPage />

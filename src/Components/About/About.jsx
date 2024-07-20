@@ -1,6 +1,5 @@
 import React from "react";
 import Profile2 from "../../assets/profile2.png";
-// imprt { motion } from "framer-motion";
 const About = () => {
   return (
     <div className="pivot-point w-full h-screen flex items-center justify-center flex-col ">

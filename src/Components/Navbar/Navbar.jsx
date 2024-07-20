@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useAnimate, stagger, motion } from "framer-motion";
-import { FaBars } from 'react-icons/fa'
+import { FaBars } from "react-icons/fa";
 
 const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
 function useMenuAnimation(isOpen) {
@@ -102,18 +102,18 @@ const Navbar = ({ references }) => {
           <p
             className="hover:text-blue-light hover:bg-gray-500 hover:bg-opacity-25 p-2 rounded-md  cursor-pointer"
             onClick={() => {
-              scrollToSection(references.projects);
-            }}
-          >
-            Projects
-          </p>
-          <p
-            className="hover:text-blue-light hover:bg-gray-500 hover:bg-opacity-25 p-2 rounded-md  cursor-pointer"
-            onClick={() => {
               scrollToSection(references.certifications);
             }}
           >
             Certifications
+          </p>
+          <p
+            className="hover:text-blue-light hover:bg-gray-500 hover:bg-opacity-25 p-2 rounded-md  cursor-pointer"
+            onClick={() => {
+              scrollToSection(references.projects);
+            }}
+          >
+            Projects
           </p>
           <p
             className="hover:text-blue-light hover:bg-gray-500 hover:bg-opacity-25 p-2 rounded-md  cursor-pointer"
@@ -146,23 +146,72 @@ const Navbar = ({ references }) => {
             onClick={() => setIsOpen(!isOpen)}
           >
             <div className="arrow" style={{ transformOrigin: "50% 55%" }}>
-            <FaBars />
+              <FaBars />
             </div>
           </motion.button>
           <ul
-          className="flex flex-col gap-2 p-4 w-screen items-center justify-center bg-secondary-light dark:bg-secondary-dark"
+            className="flex flex-col gap-2 p-4 w-screen items-center justify-center bg-secondary-light dark:bg-secondary-dark"
             style={{
               pointerEvents: isOpen ? "auto" : "none",
               clipPath: "inset(10% 50% 90% 50% round 10px)",
             }}
           >
-            <li onClick={()=>{scrollToSection(references.home); setIsOpen(!isOpen)}}>Home </li>
-            <li onClick={()=>{scrollToSection(references.about) ; setIsOpen(!isOpen)}}>About </li>
-            <li onClick={()=>{scrollToSection(references.skills); setIsOpen(!isOpen)}}>Skills </li>
-            <li onClick={()=>{scrollToSection(references.experience); setIsOpen(!isOpen)}}>Experience </li>
-            <li onClick={()=>{scrollToSection(references.projects); setIsOpen(!isOpen)}}>Projects</li>
-            <li onClick={()=>{scrollToSection(references.certifications); setIsOpen(!isOpen)}}>Certifications </li>
-            <li onClick={()=>{scrollToSection(references.contact); setIsOpen(!isOpen)}}>Contact Us</li>
+            <li
+              onClick={() => {
+                scrollToSection(references.home);
+                setIsOpen(!isOpen);
+              }}
+            >
+              Home{" "}
+            </li>
+            <li
+              onClick={() => {
+                scrollToSection(references.about);
+                setIsOpen(!isOpen);
+              }}
+            >
+              About{" "}
+            </li>
+            <li
+              onClick={() => {
+                scrollToSection(references.skills);
+                setIsOpen(!isOpen);
+              }}
+            >
+              Skills{" "}
+            </li>
+            <li
+              onClick={() => {
+                scrollToSection(references.experience);
+                setIsOpen(!isOpen);
+              }}
+            >
+              Experience{" "}
+            </li>
+            <li
+              onClick={() => {
+                scrollToSection(references.certifications);
+                setIsOpen(!isOpen);
+              }}
+            >
+              Certifications{" "}
+            </li>
+            <li
+              onClick={() => {
+                scrollToSection(references.projects);
+                setIsOpen(!isOpen);
+              }}
+            >
+              Projects
+            </li>
+            <li
+              onClick={() => {
+                scrollToSection(references.contact);
+                setIsOpen(!isOpen);
+              }}
+            >
+              Contact Us
+            </li>
           </ul>{" "}
         </nav>
       </div>

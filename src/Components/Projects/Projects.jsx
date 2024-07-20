@@ -1,6 +1,6 @@
 import React from "react";
+import {motion} from 'framer-motion'
 import ProjectCard from "./ProjectCard/ProjectCard";
-import { Carousel } from "react-material-ui-carousel";
 import Coming from "../../assets/projects/coming.png";
 import Chatbot from "../../assets/projects/chatbot.png";
 import CodeBlock from "../../assets/projects/codeblock.png";
@@ -78,11 +78,11 @@ const Projects = () => {
       <h2 className="text-primary-light dark:text-primary-dark text-center text-3xl sm:text-4xl md:text-5xl">
         Projects
       </h2>
-      <div className=" hidden 2xl:flex flex-row gap-2 w-full h-full items-center justify-evenly">
+      <motion.div className=" hidden 2xl:flex flex-row gap-2 w-full h-full items-center justify-evenly">
         {projects.map((project) => (
           <ProjectCard {...project} key={project.title} />
         ))}
-      </div>
+      </motion.div>
       <div className="2xl:hidden flex flex-col flex-wrap gap-2 w-full h-full items-center justify-evenly">
       <ProjectCard {...projects[index]} key={projects[index].title} />
       <div className="w-full flex flex-row justify-evenly">
