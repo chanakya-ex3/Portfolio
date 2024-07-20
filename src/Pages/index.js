@@ -1,1 +1,7 @@
 export {default as HomePage} from './HomePage/HomePage'
+export {default as ContactPage} from './Contact us/ContactPage'
+export {default as AboutPage} from './About/AboutPage'
+export {default as CertificationsPage} from './Certifications/CertificationsPage'
+export {default as ExperiencePage} from './Experience/ExperiencePage'
+export {default as ProjectsPage} from './Projects/ProjectsPage'
+export {default as SkillsPage} from './Skills/SkillsPage'

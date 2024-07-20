@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background: rgb(83, 120, 149);
+}
+
+::-webkit-scrollbar-thumb{
+  background: #ffffff;
+  border-radius: 25px;
+}
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -15,6 +27,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
 }
 
 a {
@@ -26,6 +39,11 @@ a:hover {
   color: #535bf2;
 }
 
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -34,6 +52,9 @@ body {
   min-height: 100vh;
 }
 
+.pivot-point{
+  scroll-snap-align: start;
+}
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -60,13 +81,27 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    background-color: #FFDEE9;
+    background-image: linear-gradient(to bottom left, #FFDEE9 0%, #B5FFFC 100%);
+
   }
   a:hover {
     color: #747bff;
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: #FF3CAC;
+    background-image: linear-gradient(to bottom left, rgb(9, 32, 63) 0%, rgb(83, 120, 149) 100%);
+
+  }
+  a:hover {
+    color: #535bf2;
+  }
+  button {
+    background-color: #1a1a1a;
   }
 }

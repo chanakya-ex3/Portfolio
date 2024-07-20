@@ -10,9 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.4.2",
+    "framer-motion": "^11.2.13",
     "react": "^18.3.1",
+    "react-chrono-multicard": "^1.1.4",
     "react-dom": "^18.3.1",
+    "react-icons": "^5.2.1",
     "react-social-icons": "^6.16.0",
+    "react-vertical-timeline-component": "^3.6.0",
+    "svelte-vertical-timeline": "^1.0.2",
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
