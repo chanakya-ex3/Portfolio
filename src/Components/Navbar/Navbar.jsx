@@ -107,14 +107,14 @@ const Navbar = ({ references }) => {
           >
             Certifications
           </p>
-          <p
+          {/* <p
             className="hover:text-blue-light hover:bg-gray-500 hover:bg-opacity-25 p-2 rounded-md  cursor-pointer"
             onClick={() => {
               scrollToSection(references.projects);
             }}
           >
             Projects
-          </p>
+          </p> */}
           <p
             className="hover:text-blue-light hover:bg-gray-500 hover:bg-opacity-25 p-2 rounded-md  cursor-pointer"
             onClick={() => {
@@ -196,14 +196,14 @@ const Navbar = ({ references }) => {
             >
               Certifications{" "}
             </li>
-            <li
+            {/* <li
               onClick={() => {
                 scrollToSection(references.projects);
                 setIsOpen(!isOpen);
               }}
             >
               Projects
-            </li>
+            </li> */}
             <li
               onClick={() => {
                 scrollToSection(references.contact);

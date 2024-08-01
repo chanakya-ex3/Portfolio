@@ -7,7 +7,7 @@ import {
   AboutPage,
   SkillsPage,
   ExperiencePage,
-  ProjectsPage,
+  // ProjectsPage,
   CertificationsPage,
   ContactPage,
 } from "./Pages";
@@ -71,9 +71,9 @@ const App = () => {
         <div ref={certificationsRef}>
           <CertificationsPage />
         </div>
-        <div ref={projectsRef}>
+        {/* <div ref={projectsRef}>
           <ProjectsPage />
-        </div>
+        </div> */}
         <div ref={contactRef}>
           <ContactPage />
         </div>

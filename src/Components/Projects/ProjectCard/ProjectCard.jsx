@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from "react";
 import { FaGithub, FaGlobe } from "react-icons/fa";
 
@@ -20,7 +21,7 @@ const ProjectCard = ({
   };
 
   return (
-    <div className={`bg-white rounded-lg w-[90vw] sm:w-[400px] h-[550px] ${isExpanded?"sm:h-fit":"sm:h-[600px]"}  flex flex-col`}>
+    <div className={`bg-white rounded-lg w-[90vw] sm:w-[20vw] h-[550px] ${isExpanded?"sm:h-fit":"sm:h-[600px]"}  flex flex-col`}>
       <div className="flex flex-col flex-grow p-6">
         <img src={image} className="w-[250ps] sm:w-[400px] self-center"  alt="" />
         <h2 className="mt-2 text-lg sm:text-xl font-semibold text-gray-800">{title}</h2>
