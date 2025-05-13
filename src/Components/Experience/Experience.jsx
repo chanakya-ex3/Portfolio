@@ -9,7 +9,7 @@ import { MdWork } from "react-icons/md";
 const Experience = () => {
   const experiences = [
     {
-      date: "May 2024 - Present",
+      date: "June 2024 - Nov 2024",
       title: "Software Development Intern",
       subtitle: "i4sight Technologies",
       description:
@@ -18,7 +18,7 @@ const Experience = () => {
     {
       date: "Aug 2023 - Nov 2023",
       title: "Application Developer Intern",
-      subtitle: "Opera Project Management Consultants Pvt. Ltd.",
+      subtitle: "Amana Software Application PVT LTD.",
       description:
         "Developed a full-stack app with Flutter and Firebase. Implemented Firebase for backend functionality and security. Delivered high-quality software ahead of deadlines.",
     },
